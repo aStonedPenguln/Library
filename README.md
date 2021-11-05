@@ -1,4 +1,6 @@
 # Library
-Library for aimware.net
+Information Library for aimware.net
 
-МАТЬ ЕБАЛ
+Libraries/Engines included
+
+You can edit scripts with any editor you want, cheat will sync scripts automatically
