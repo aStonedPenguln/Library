@@ -359,3 +359,19 @@ local function T(U, V)
 end
 ******})
 return K
+
+----------------------------------------------EXAMPLE
+local csgo_weapons = loadstring(file.Read("libraries/csgo_weapons.lua"))()
+
+callbacks.Register(
+    "Draw",
+    "csgo_weapons_example",
+    function()
+        local weapons_data = csgo_weapons[9]
+        print(weapons_data.console_name, weapons_data.name, weapons_data.item_class, weapons_data.type, weapons_data.idx, weapons_data.secondary_clip_size, weapons_data.damage)
+
+        local lp = entities.GetLocalPlayer()
+        local weapons_data = csgo_weapons(lp)
+        print(weapons_data.console_name, weapons_data.name, weapons_data.item_class, weapons_data.type, weapons_data.idx, weapons_data.secondary_clip_size, weapons_data.damage)
+    end
+)
